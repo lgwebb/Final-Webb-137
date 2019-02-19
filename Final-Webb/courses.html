@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CIS-137 Final</title>
+    <!-- DO NOT REMOVE ANY OF THE COMMENT LINES -->
+    <!-- Add the link to Stylesheet.css # -->
+    <!-- Create a print.css in the css folder. 
+        The print.css should keep all of-the original screen formatting except the following:
+        
+        - all text should be blue
+        - the logo should not display
+        - the panoramic image should not display
+        - the book images should not display
+        - the slide images should not display
+        - the left and right article elements should have a width of 94%
+
+        -->
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+    <link href="css/print.css" rel="stylesheet" media="print" />
+    
+    <script type="text/javascript">
+        function showTextBook(cis101,cis105,cis132,cis137,cis139,cis232,cis234,cis237)
+        {
+            document.getElementById("cis101").src="Images/books/" + cis101;
+            document.getElementById("cis101").style.visibility="visible";
+            document.getElementById("cis105").src="Images/books/" + cis105;
+            document.getElementById("cis105").style.visibility="visible";
+            document.getElementById("cis132").src="Images/books/" + cis132;
+            document.getElementById("cis132").style.visibility="visible";
+            document.getElementById("cis137").src="Images/books/" + cis137;
+            document.getElementById("cis137").style.visibility="visible";
+            document.getElementById("cis139").src="Images/books/" + cis139;
+            document.getElementById("cis139").style.visibility="visible";
+            document.getElementById("cis232").src="Images/books/" + cis232;
+            document.getElementById("cis232").style.visibility="visible";
+            document.getElementById("cis234").src="Images/books/" + cis234;
+            document.getElementById("cis234").style.visibility="visible";
+            document.getElementById("cis237").src="Images/books/" + cis237;
+            document.getElementById("cis237").style.visibility="visible";
+        
+           
+            // window.alert(filename);
+            // Complete the function to show the selected image.
+
+        }
+     
+
+        function hideTextBook(filename)
+        {
+            document.getElementById("cis101").style.visibility="hidden";
+            document.getElementById("cis105").style.visibility="hidden";
+            document.getElementById("cis132").style.visibility="hidden";
+            document.getElementById("cis137").style.visibility="hidden";
+            document.getElementById("cis139").style.visibility="hidden";
+            document.getElementById("cis232").style.visibility="hidden";
+            document.getElementById("cis234").style.visibility="hidden";
+            document.getElementById("cis237").style.visibility="hidden";
+            // Complete the function to hide the selected image
+
+        }
+   
+    </script>
+    <!-- DO NOT REMOVE ANY OF THE COMMENT LINES BELOW
+        
+        Add an internal style block with the following class names and styles
+        courseTitle
+            set the font size to 1.2em and make it bold
+
+        tableCourses tbody td
+            set the padding to .5%
+
+        imageTextBook
+            set the width to 60% and hide the element
+            
+
+        textBookPopup    
+            set the width to 20% and the height to auto. set the background color to 4cff00
+    # -->
+    <style type="text/css">
+        .courseTitle {font-size: 1.2em; font-weight: bold;}
+        .tableCourses tbody td {padding: .5%;}
+        .imageTextBook {width: 60%; visibility: hidden;}
+        .textBookPopup {width: 20%; height: auto; background-color: #4cff00;}
+    </style>
+</head>
+<body id="top">
+    <div id="divWrapper">
+        <header class="pageHeader">
+            <div class="divLogo">
+                <img src="Images/CCC-Logo.png" />
+            </div>
+            <div class="divTitle">
+                Computer Information Systems
+                <br />
+                <span>Courses</span>
+            </div>
+        </header>
+        <nav class="navTop">
+            <ul class="menubar">
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="courses.html" class="selected">Courses</a></li>
+                    <li><a href="textbooks.html">Textbooks</a></li>
+            </ul>
+            <!-- Add the menu as shown in the video.
+        Use an un-ordered list and then apply the selected class style to the appropriate link # -->
+
+        </nav>
+        <nav class="navTop" style="background-color:#336699;">
+            <ul class="menubar">
+                <!-- Add the links to go directly to the course on this page # -->
+                <li><a href="#101">CIS-101</a></li>
+                <li><a href="#105">CIS-105</a></li>
+                <li><a href="#132">CIS-132</a></li>
+                <li><a href="#137">CIS-137</a></li>
+                <li><a href="#139">CIS-139</a></li>
+                <li><a href="#232">CIS-232</a></li>
+                <li><a href="#234">CIS-234</a></li>
+                <li><a href="#237">CIS-237</a></li>
+            </ul>
+        </nav>
+        <section class="sectionMain">
+            <p></p>
+            <table class="tableCourses">
+                <thead>
+                    <tr>
+                        <th colspan="2">CIS Courses</th>
+                    </tr>
+                    <tr>
+                        <th>Course #</th>
+                        <th class="credits">Description</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">&nbsp;</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <!-- CIS101 -->
+                    <tr id="101">
+                        <td class="courseTitle" rowspan="5" style="border-bottom:1px solid ;width:20%;vertical-align:top;">
+                            <!-- Add the attribute to span 5 rows. Add the style to align the text to the top # -->
+                            CIS-101
+                            <br />
+                            <img id="cis101" class="imageTextBook" src="" />
+                        </td>
+                        <td class="courseTitle">
+                            Introduction to Computer Information Systems
+                            <a href="#top">^</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            CIS-101, Introduction to Computer Information Systems, is designed
+                            to prepare students to focus upon the technological demands of the
+                            21st century workforce. Students use creative thinking, problem
+                            solving, effective communication, team building, and analyze
+                            social and ethical issues related to computers, networks, and
+                            the Internet. Students gain hands-on experience through examples
+                            and team-based scenarios using Web/Internet applications, current
+                            word processing, spreadsheet, database, presentation applications,
+                            and the current Windows operating system. Prerequisite: exemption/completion
+                            of READ-091 and MAT-097. Three hours lecture each week. Three credits.
+                            Three billable hours.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- Add the code to show and hide the textbook for this course -->
+                            <div class="textBookPopup"
+                                onmouseover="showTextBook('cis101.jpg');"
+                                onmouseout="hideTextBook();">
+                                Show\Hide TextBook
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-weight:bold;">Credits:</span> 3</td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom:1px solid black;">
+                            <span style="font-weight:bold;">Prerequisite: </span> 
+                            exemption/completion of READ-091 and MAT-097.
+                        </td>
+                    </tr>
+
+
+                    <!-- CIS105 -->
+                    <tr id="105">
+                        <td class="courseTitle" rowspan="5" style="border-bottom: 1px solid black;  width: 20%;vertical-align:top;">
+                            <!-- Add the attribute to span 5 rows. Add the style to align the text to the top # -->
+                            CIS-105
+                            <br />
+                            <img id="cis105" class="imageTextBook" src="" />
+                        </td>
+
+                        <td class="courseTitle">
+                            Game Programming
+                            <a href="#top">^</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            CIS-105, Game Programming, is an introductory programming course
+                            using Flash ActionScript for game development. In this course,
+                            students will develop problem-solving skills, construct algorithms,
+                            and use good programming practices. Students will learn to use,
+                            loops, if statements, and arrays and will learn to manipulate
+                            vector objects with code. In addition, integration of sounds,
+                            including voices and music, will be explored. The course assumes
+                            some experience with computers. Students lacking this exposure
+                            are advised to take CGR-105 or CIS-101 prior to CIS-105.
+                            Prerequisite: exemption/completion of READ-091 or permission
+                            of the program adviser. Two hours lecture, two hours laboratory
+                            each week. Three credits. Three billable hours.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- Add the code to show and hide the textbook for this course -->
+                            <div class="textBookPopup" 
+                                onmouseover="showTextBook('cis105.jpg');"
+                                onmouseout="hideTextBook();">
+                                Show\Hide TextBook
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-weight:bold;">Credits:</span> 3</td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom:1px solid black;">
+                            <span style="font-weight:bold;">Prerequisite: </span>
+                            exemption/completion of READ-091 or permission
+                            of the program adviser.
+                        </td>
+                    </tr>
+
+                    <!-- CIS132 -->
+                    <tr id="132">
+                        <td class="courseTitle" rowspan="5" style="border-bottom:1px solid black;width:20%;vertical-align:top;">
+                            <!-- Add the attribute to span 5 rows. Add the style to align the text to the top # -->
+                            CIS-132
+                            <br />
+                            <img id="cis132" class="imageTextBook" src="" />
+                        </td>
+                        <td class="courseTitle">
+                            Principles of Programming
+                            <a href="#top">^</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            CIS-132, Principles of Programming, introduces the student
+                            to programming fundamentals and techniques. Students will learn
+                            how to write code and develop strategies to solve problems. An
+                            object-oriented programming language will be used. Prerequisite:
+                            exemption/completion of READ-091 and MAT-099. Three hours lecture,
+                            two hours laboratory each week. Four credits. Four billable hours.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- Add the code to show and hide the textbook for this course -->
+                            <div class="textBookPopup"
+                                onmouseover="showTextBook('cis132.jpg');"
+                                onmouseout="hideTextBook();">
+                                Show\Hide TextBook
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-weight:bold;">Credits:</span> 4</td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom:1px solid black;">
+                            <span style="font-weight:bold;">Prerequisite: </span>
+                            exemption/completion of READ-091 and MAT-099.
+                        </td>
+                    </tr>
+
+                    <!-- CIS137 -->
+                    <tr id="137">
+                        <td class="courseTitle" rowspan="5" style="border-bottom:1px solid black;width:20%;vertical-align:top;">
+                            <!-- Add the attribute to span 5 rows. Add the style to align the text to the top # -->
+                            CIS-137
+                            <br />
+                            <img id="cis137" class="imageTextBook" src="" />
+                        </td>
+                        <td class="courseTitle">
+                            Introduction to Web Development Technologies
+                            <a href="#top">^</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            CIS-137, Introduction to Web Development Technologies,
+                            introduces the student to the languages and tools used to
+                            develop interactive Web sites that effectively communicate
+                            ideas, concepts and information. The course focuses on Web
+                            site development by utilizing Hypertext Markup Language
+                            (HTML), Extensible Hypertext Markup Language (XHTML),
+                            Cascading Style Sheets (CSS) and JavaScript.
+                            Students will receive hands-on experience in a
+                            variety of Web technologies and coding languages
+                            to develop fully functional sites.
+                            Prerequisite: exemption/completion of READ-091.
+                            Two hours lecture and two hours of lab each week.
+                            Three credits. Three billable hours.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- Add the code to show and hide the textbook for this course -->
+                            <div class="textBookPopup"
+                                onmouseover="showTextBook('cis137.jpg');"
+                                onmouseout="hideTextBook();">
+                                Show\Hide TextBook
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-weight:bold;">Credits:</span> 3</td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom:1px solid black;">
+                            <span style="font-weight:bold;">Prerequisite: </span>
+                            exemption/completion of READ-091.
+                        </td>
+                    </tr>
+
+                    <!-- CIS139 -->
+                    <tr id="139">
+                        <td class="courseTitle" rowspan="5" style="border-bottom:1px solid black;width:20%;vertical-align:top;">
+                            <!-- Add the attribute to span 5 rows. Add the style to align the text to the top # -->
+                            CIS-139
+                            <br />
+                            <img id="cis139" class="imageTextBook" src="" />
+                        </td>
+                        <td class="courseTitle">
+                            Principles of Computer Technology
+                            <a href="#top">^</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            CIS-139, Principles of Computer Technology, covers a broad spectrum
+                            of concepts dealing with the microcomputer to ensure a sound technical
+                            foundation in the computer technology field. Students will learn
+                            how to assemble and configure a personal computer including the
+                            operating system. Concepts include system hardware and operating
+                            systems as well as basic troubleshooting, data communications and
+                            networking. Prerequisite: CIS-101, MIS-101, or CAD-101, or
+                            permission of the program advisor. Three hours lecture, two
+                            hours laboratory each week. Four credits. Four billable hours.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- Add the code to show and hide the textbook for this course -->
+                            <div class="textBookPopup" 
+                                onmouseover="showTextBook('cis139.jpg');"
+                                onmouseout="hideTextBook();">
+                                Show\Hide TextBook
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-weight:bold;">Credits:</span> 4</td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom:1px solid black;">
+                            <span style="font-weight:bold;">Prerequisite: </span>
+                            CIS-101, MIS-101, or CAD-101, or
+                            permission of the program advisor.
+                        </td>
+                    </tr>
+
+
+                    <!-- CIS232 -->
+                    <tr id="232">
+                        <td class="courseTitle"  rowspan="5" style="border-bottom:1px solid black;width:20%;vertical-align:top;">
+                            <!-- Add the attribute to span 5 rows. Add the style to align the text to the top # -->
+                            CIS-232
+                            <br />
+                            <img id="cis232" class="imageTextBook" src="" />
+                        </td>
+                        <td class="courseTitle">
+                            Advanced Principles of Programming
+                            <a href="#top">^</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            CIS-232, Advanced Principles of Programming, continues object-oriented
+                            programming beyond CIS-132, Principles of Programming, the introductory
+                            level course. A variety of tools and techniques are examined.
+                            A sample of the key topics covered include: lists, searching,
+                            sorting, stacks, queues and trees. Prerequisite: CIS-132 or
+                            permission of the program adviser. Three hours lecture, two hours
+                            laboratory each week. Four credits. Four billable hours.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- Add the code to show and hide the textbook for this course -->
+                            <div class="textBookPopup" 
+                                onmouseover="showTextBook('cis232.jpg');"
+                                onmouseout="hideTextBook();">
+                                Show\Hide TextBook
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-weight:bold;">Credits:</span> 4</td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom:1px solid black;">
+                            <span style="font-weight:bold;">Prerequisite: </span>: CIS-132 or
+                            permission of the program adviser.
+                        </td>
+                    </tr>
+
+
+                    <!-- CIS234 -->
+                    <tr id="234">
+                        <td class="courseTitle" rowspan="5" style="border-bottom:1px solid black;width:20%;vertical-align:top;">
+                            <!-- Add the attribute to span 5 rows. Add the style to align the text to the top # -->
+                            CIS-234
+                            <br />
+                            <img id="cis234" class="imageTextBook" src="" />
+                        </td>
+                        <td id="234" class="courseTitle">
+                            Developing Rich Internet Applications
+                            <a href="#top">^</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            CIS-234, Developing Rich Internet Applications, explores the new
+                            category of engaging web applications being developed using tools
+                            such as Flex, Flash ActionScript, AJAX and Silverlight. Rich Internet
+                            Applications (RIAs) can combine rich media (such as video, audio, and
+                            animation) to achieve powerful data visualizations. Students will
+                            create a portfolio of their work in which they use the latest Rich
+                            Internet Application tools. Prerequisite: exemption/completion of
+                            READ-091 and either CIS-105 or CIS-132. Two hours lecture,
+                            two hours of lab each week. Three credits. Three billable hours.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- Add the code to show and hide the textbook for this course -->
+                            <div class="textBookPopup" 
+                                 onmouseover="showTextBook('cis234.jpg');"
+                                onmouseout="hideTextBook();">
+                                Show\Hide TextBook
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-weight:bold;">Credits:</span> 3</td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom:1px solid black;">
+                            <span style="font-weight:bold;">Prerequisite: </span> exemption/completion of
+                            READ-091 and either CIS-105 or CIS-132.
+                        </td>
+                    </tr>
+
+
+                    <!-- CIS237 -->
+                    <tr id="237">
+                        <td class="courseTitle" rowspan="5" style="border-bottom:1px solid black;width:20%;vertical-align:top;">
+                            <!-- Add the attribute to span 5 rows. Add the style to align the text to the top #  -->
+                            CIS-237
+                            <br />
+                            <img id="cis237" class="imageTextBook" src="" />
+                        </td>
+                        <td class="courseTitle">
+                            Developing Advanced Internet Applications
+                            <a href="#top">^</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            CIS-237, Developing Advanced Internet Applications, covers technology
+                            such as ASP.NET, PHP or Cold Fusion to create data-driven web pages
+                            and applications. The student will gain hands-on experience developing
+                            web applications that interact with server-side databases. Knowledge
+                            of HTML and some computer programming experience is highly recommended.
+                            Prerequisite: exemption/completion of one of the following courses
+                            CIS-105, CIS-132, CIS-137 or CIS-234. Three hours lecture, two hours
+                            laboratory each week. Four credits. Four billable hours.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- Add the code to show and hide the textbook for this course -->
+                            <div class="textBookPopup" 
+                                 onmouseover="showTextBook('cis237.jpg');"
+                                onmouseout="hideTextBook();">
+                                Show\Hide TextBook
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-weight:bold;">Credits: </span></td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom:1px solid black;">
+                            <span style="font-weight:bold;">Prerequisite: </span>
+                            exemption/completion of one of the following courses
+                            CIS-105, CIS-132, CIS-137 or CIS-234.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <footer class="pageFooter">
+            Lucas Webb.  Carroll Community College.
+        </footer>
+    </div>
+</body>
+</html>

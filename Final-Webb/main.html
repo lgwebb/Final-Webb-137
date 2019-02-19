@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Main</title>
+    <!-- DO NOT REMOVE ANY OF THE COMMENT LINES -->
+    <!-- Add the link to Stylesheet.css #-->
+
+    <!-- Create a print.css in the css folder.
+        The print.css should keep all of-the original screen formatting except the following:
+
+        - all text should be blue
+        - the logo should not display
+        - the panoramic image should not display
+        - the slide images should not display
+        - the left and right article elements should have a width of 94%
+
+        -->
+
+
+    <!-- Add the link to slides.js #-->
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+    <link href="css/print.css" rel="stylesheet" media="print" />
+    <script href="scripts/slides.js"></script>
+    <script>
+    function StartSlides()
+{
+    /* Complete the code so the RotateSlides function executes every 5 seconds and the
+       RotateBanners function executes every three seconds */
+
+    intTimer = self.setInterval("RotateSlides();", 5000);
+    intTimer2 = self.setInterval("RotateBanners();", 3000);
+}
+
+function RotateSlides() 
+{
+    var intNumber = 4;
+    var intRandom;
+    intRandom = Math.floor(Math.random() * intNumber + 1);
+    document.getElementById("ImageSlides").src="Images/slides/slide" + intRandom + ".jpg";
+    /* add the code to display the slides from the Images/slides/slide folder. */
+
+}
+
+function RotateBanners() 
+{
+    var intNumber = 7;
+    var intRandom;
+    intRandom = Math.floor(Math.random() * intNumber + 1);
+    document.getElementById("ImageBanners").src="Images/banners/banner" + intRandom + ".png";
+    /* add the code to display the banners from the Images/banners/banner folder. */
+
+}</script>
+</head>
+<body onload="StartSlides();">
+    <div id="divWrapper">
+        <div id="divLeft">
+            <article>
+                <img src="Images/slides/slide1.jpg" id="ImageSlides"
+                     class="imageSlide" />
+            </article>
+            <article>
+                <img src="Images/banners/banner1.png" id="ImageBanners" class="imageSlide" />
+            </article>
+        </div>
+        <div id="divRight">
+            <header class="pageHeader">
+                <img src="Images/CCC-Logo.png" />
+                <br />
+                Computer Information Systems
+            </header>
+            <nav class="navTop">
+                <ul class="menubar">
+                    <li><a href="main.html" class="selected">Home</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="textbooks.html">Textbooks</a></li>
+                </ul>
+                <!-- Add the menu as shown in the video. 
+                    Use an un-ordered list and then apply the selected class style to the appropriate link -->
+                
+            </nav>
+            <section class="sectionMain">
+                    <table>
+                        <tr>
+                            <th colspan="2">Program Description</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                The Computer Information Systems program is designed to prepare students
+                                for a career in computer technology or to transfer to a 4-year institution
+                                to pursue a baccalaureate degree. The program provides the knowledge
+                                and skills needed to pursue a successful career in those areas of
+                                business, education, government and other fields in which computers
+                                are routinely used for information processing. In particular, the
+                                Computer Information Systems program offers instruction for students
+                                interested in microcomputer-based computer careers. The courses
+                                teach students how software and hardware interrelate to build a
+                                cohesive approach to solving problems.
+                            </td>
+                        </tr>
+                    </table>
+                    <p></p>
+            </section>
+            <footer class="pageFooter">
+                Lucas Webb.  Carroll Community College.
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

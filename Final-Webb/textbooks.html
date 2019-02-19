@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>TextBooks</title>
+    <!-- DO NOT REMOVE ANY OF THE COMMENT LINES -->
+    <!-- Add the link to Stylesheet.css-->
+
+    <!-- Create a print.css in the css folder.
+        The print.css should keep all of-the original screen formatting except the following:
+
+        - all text should be blue
+        - the logo should not display
+        - the panoramic image should not display
+        - the slide images should not display
+        - the left and right article elements should have a width of 94%
+
+        -->
+     <link href="css/StyleSheet.css" rel="stylesheet" />
+    <link href="css/print.css" rel="stylesheet" media="print" />
+    <script href="scripts/books.js"></script>
+    <script> 
+    function confirmRating()
+{
+    /* Compete the code to display the values from the form in an alert message box as shown in the demo video. */
+    /* var myWindow = */ 
+    window.alert("Thank you for rating our book for" + 
+                ". Your rating of " + document.getElementById("rbutton").value + 
+                 " will be emailed to: " + document.getElementById("TextEmailAddress").value);
+}
+    </script>
+    <!-- Add the link to books.js-->
+
+    <script type="text/javascript">
+        function showBook(filename)
+        {
+            //window.alert(filename);
+            document.getElementById("bookCourse").innerHTML="132";
+            document.getElementById("imageBook").style.visibility = "visible";
+            document.getElementById("imageBook").src = "Images/books/" + filename + ".jpg";
+            document.getElementById("imageBook").alt = filename + ".jpg";
+
+            /* display the selected filename in the element bookCourse */
+
+        }
+
+        function showLargeImage(filename)
+        {
+            /* Complete the window.open statement to display the image in a new window */
+            window.open("Images/books/full/cis132.jpg", '', "_blank", "top=200, left=500, height=400, width=400");
+        }
+
+    </script>
+    <style type="text/css">
+        .imageBook 
+        {
+            visibility:hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="divWrapper">
+        <header class="pageHeader">
+            <div class="divLogo">
+                <img src="Images/CCC-Logo.png" />
+            </div>
+            <div class="divTitle">
+                Computer Information Systems
+                <br />
+                <span>TextBooks</span>
+            </div>
+        </header>
+        <nav class="navTop">
+            <ul class="menubar">
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="textbooks.html" class="selected">Textbooks</a></li>
+            </ul>
+            <!-- Add the menu as shown in the video.
+        Use an un-ordered list and then apply the selected class style to the appropriate link # -->
+
+        </nav>
+        <section class="sectionMain">
+            <article class="articleLeft">
+                <header class="articleHeading">Click on a TextBook</header>
+                <p></p>
+                <table class="tableCourses">
+                    <!-- for each td element in the table add an inline style that sets the padding to one percent # -->
+                    <tr>
+                        <td style="padding:1%;">
+                            <!-- add the onclick attribute and pass the data contained in the alt attribute -->
+                            <img src="Images/books/cis101.jpg" alt="cis101" title="CIS-101" style="cursor: pointer; width: 100%;" onclick="showBook(this.alt);"
+                                  />
+                        </td>
+                        <td style="padding:1%;">
+                            <!-- add the onclick attribute and pass the data contained in the alt attribute -->
+                            <img src="Images/books/cis105.jpg" alt="cis105" title="CIS-105" style="cursor: pointer; width: 100%;" onclick="showBook(this.alt);"
+                                  />
+                        </td>
+                        <td style="padding:1%;">
+                            <img src="Images/books/cis132.jpg" alt="cis132" title="CIS-132" style="cursor: pointer; width: 100%;"
+                                 onclick="showBook(this.alt);" />
+                        </td>
+                        <td style="padding:1%;">
+                            <!-- add the onclick attribute and pass the data contained in the alt attribute -->
+                            <img src="Images/books/cis137.jpg" alt="cis137" title="CIS-137" style="cursor: pointer; width: 100%;" onclick="showBook(this.alt);"
+                                  />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:1%;">
+                            <!-- add the onclick attribute and pass the data contained in the alt attribute -->
+                            <img src="Images/books/cis139.jpg" alt="cis139" title="CIS-139" style="cursor: pointer; width: 100%;" onclick="showBook(this.alt);"
+                                  />
+                        </td>
+                        <td style="padding:1%;">
+                            <!-- add the onclick attribute and pass the data contained in the alt attribute -->
+                            <img src="Images/books/cis232.jpg" alt="cis232" title="CIS-232" style="cursor: pointer; width: 100%;" onclick="showBook(this.alt);"
+                                  />
+                        </td>
+                        <td style="padding:1%;">
+                            <!-- add the onclick attribute and pass the data contained in the alt attribute -->
+                            <img src="Images/books/cis234.jpg" alt="cis234" title="CIS-234" style="cursor: pointer; width: 100%;" onclick="showBook(this.alt);"
+                                  />
+                        </td>
+                        <td style="padding:1%;">
+                            <!-- add the onclick attribute and pass the data contained in the alt attribute -->
+                            <img src="Images/books/cis237.jpg" alt="cis237" title="CIS-237" style="cursor: pointer; width: 100%;" onclick="showBook(this.alt);"
+                                  />
+                        </td>
+                    </tr>
+                </table>
+            </article>
+            <article class="articleRight">
+                <header class="articleHeading">Rate a TextBook</header>
+                <p></p>
+                    <form id="formTextBooks" method="post" action="textbooks.html">
+                <!-- Add a form element with the id set to formTextBooks. The element should also have the
+                     method and action attributes & -->
+
+                    <table class="tableCourses">
+                        <tr>
+                            <td colspan="2" style="vertical-align:top;" id="bookCourse"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img id="imageBook" alt="" src="" style="cursor:pointer;"
+                                     onclick="showLargeImage(this.alt);"
+                                     title="Click to see larger image in a new tab."/>
+                            </td>
+                            <td>
+                                <ol>
+                                    <li>Email Address: <input type="text" id="TextEmailAddress" /> </li>
+                                    <li>
+                                        Rating:
+                                            <ul>
+                                                <li>
+                                                    <input type="radio"
+                                                        id="rbutton"
+                                                        name="rbBook" 
+                                                        value="Excellent" />Excellent</li>
+                                                <li>
+                                                    <input type="radio"
+                                                        id="rbutton"
+                                                        name="rbBook" 
+                                                        value="Good" />Good</li>
+                                                <li>
+                                                    <input type="radio"
+                                                        id="rbutton"
+                                                        name="rbBook" 
+                                                        value="Fair" />Fair</li>
+                                                <li>
+                                                    <input type="radio"
+                                                        id="rbutton"
+                                                        name="rbBook" 
+                                                        value="Poor" />Poor</li>
+        
+                                        </ul>
+                                        <!-- Add the un-ordered list with radio buttons to rate tbe books 
+                                             Set the name attribute on each button to rbBook.    
+                                        # -->
+
+                                    </li>
+                                    <li>
+                                        <!-- add an onclick attribute that calls the confirmRating function and
+                                            passes the value selected from the radio button -->
+                                        <input type="button" id="ButtonRateBook"
+                                                onclick="confirmRating();"
+                                                
+                                                value="Rate Book" />
+                                    </li>
+                                </ol>
+                            <td>
+                        </tr>
+                    </table>
+                </form>
+                <!-- add the closing form element # -->
+
+            </article>
+         </section>
+        <footer class="pageFooter">
+            Lucas Webb.  Carroll Community College.
+        </footer>
+    </div>
+</body>
+</html>
